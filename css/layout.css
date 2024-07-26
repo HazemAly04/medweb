@@ -1,0 +1,278 @@
+/* CSS Reset */
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Sections */
+.container {
+    margin: 10px;
+    padding: 10px;
+    background-color: #e4e4e4d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* New styles for footer-content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Styles for text content within footer-content */
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Styles for the map image */
+.clinic-image {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+}
+
+/* Team members */
+.team-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.face {
+    text-align: center;
+    min-width: 100px;
+    flex: 1;
+}
+
+.face img {
+    width: 100px;
+    height: 100px; /* Ensure height matches width for a perfect circle */
+    border-radius: 50%; /* Make image circular */
+}
+
+.face p {
+    margin-top: 5px;
+}
+
+/* Header Styles */
+.page-header {
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Styles */
+.page-nav {
+    background: #d0d0d0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.page-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.page-nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.page-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.page-nav ul li:hover .submenu {
+    display: block;
+}
+
+.page-nav a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+/* Footer Styles */
+#footer-layout {
+    background: #d0d0d0;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.image {
+    margin-right: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* New styles for map-container */
+.map-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 500px; /* Adjust size as needed */
+    height: auto;
+}
+
+.hours-content {
+    flex: 1;
+}
+
+/* Media Queries */
+
+/* Phone Media */
+@media (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .page-header {
+        padding: 40px 0;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .face img {
+        width: 80px; /* Adjust size if needed */
+        height: 80px; /* Ensure height matches width for a perfect circle */
+    }
+}
+
+/* Tablet Media */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .team-members {
+        justify-content: space-around;
+    }
+
+    .face {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .face img {
+        width: 120px;
+        height: 120px; /* Ensure height matches width for a perfect circle */
+    }
+
+    .page-header {
+        padding: 60px 0;
+    }
+
+    .page-nav ul {
+        text-align: center;
+    }
+
+    .page-nav ul li {
+        display: inline-block;
+    }
+
+    .page-nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+    }
+}
+
+/* Laptop/Desktop Media */
+@media (min-width: 992px) {
+    .container {
+        margin: 10px auto;
+        padding: 30px;
+        max-width: 1300px; /* Adjusted for slightly larger content */
+    }
+
+    .team-members {
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .face {
+        min-width: 200px;
+    }
+
+    .face img {
+        width: 150px;
+        height: 150px; /* Ensure height matches width for a perfect circle */
+    }
+
+    .page-header {
+        padding: 100px 0;
+    }
+
+    .page-nav ul li a {
+        padding: 15px 20px;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+    }
+
+    .image {
+        width: 150px;
+    }
+
+    /* Adjust map-container for laptop view */
+    .map-container {
+        flex-direction: row; /* Side-by-side layout for map and hours */
+        justify-content: space-between; /* Ensure map is on the right */
+    }
+
+    .map-image {
+        max-width: 50%; /* Adjust as needed */
+    }
+
+    .hours-content {
+        max-width: 50%; /* Adjust as needed */
+        margin-left: 20px; /* Space between hours and map */
+    }
+}
